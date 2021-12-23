@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(236, 183, 183);
+    box-sizing:border-box;
+    line-height: 0.5;
+
+    main{
+        .main__container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height:60vh;
+            width:20vw;
+            background-color: rgb(70, 68, 65,0.5);
+            margin:auto;
+            margin-top:7rem;
+            border-radius:1.6rem;
+            box-shadow: 2px 2px 5px black;
+            color:rgb(194, 188, 188);
+
+            &-songdetail{
+                margin : 1rem 0 1.5rem 0;
+            }
+
+            .song_image{
+                
+                img{
+                    width:10rem;
+                    height:10rem;
+                    border-radius: 50%;
+                    margin-bottom: 3.2rem;
+                    box-shadow: 1px 2px 3px white;
+
+                    &.anime{
+                        animation:rotatey 3s linear infinite;
+                    }
+                }
+            }
+
+            .music_controls{
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+               i{
+                   &:not(:last-child){
+                     margin-right: 2rem;
+                   }
+
+                   &.main_btn{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    width:3rem;
+                    height:3rem;
+                    background-color: black;
+                    border-radius: 50%;
+
+                    &:hover{
+                        background-color: white;
+                        color:black;
+                        
+                    }
+                }
+               }
+
+               .fa-forward,.fa-backward{
+                   &:hover{
+                    box-shadow: 2px 2px 5px white;
+                   }
+               }
+
+               
+            }
+        }
+    }
+}
+
+@keyframes rotatey {
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}

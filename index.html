@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- <input type="range" min="1" max="100" value="50" id="Slider" >
+    <div class="slider__container">
+        <div class="selectBtn"></div>
+    </div>
+    <script>
+        var slider = document.querySelector('#Slider');
+        var selector = document.querySelector('.slider__container');
+        var selVal = document.querySelector('.selectBtn');
+        selector.style.left = slider.value+"%";
+        slider.oninput = function(){
+            selector.style.left=this.value/4+"%";
+            selVal.innerText = this.value;
+        }
+    </script> -->
+
+    <main>
+        <div class="main__container">
+            <div class="main__container-songdetail">
+                <h3>SONG NAME</h3>
+                <h5>SINGER NAME</h5>
+            </div>
+            <div class="song_image">
+                <img src="dist/images/Saazish.jpg" alt="" id="image">
+            </div>
+            <audio src="dist/audio/Saazish.mp3"></audio>
+            <div class="music_controls">
+                <i class="fas fa-backward" id="prev"></i>
+                <i class="fas fa-play main_btn" id="play"></i>
+                <i class="fas fa-forward" id="next"></i>
+            </div>
+        </div>
+    </main>
+
+    <script src="dist/js/app.js"></script>
+</body>
+</html>

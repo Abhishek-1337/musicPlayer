@@ -1,0 +1,75 @@
+body {
+  background-color: #ecb7b7;
+  box-sizing: border-box;
+  line-height: 0.5;
+}
+body main .main__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 60vh;
+  width: 20vw;
+  background-color: rgba(70, 68, 65, 0.5);
+  margin: auto;
+  margin-top: 7rem;
+  border-radius: 1.6rem;
+  box-shadow: 2px 2px 5px black;
+  color: #c2bcbc;
+}
+body main .main__container-songdetail {
+  margin: 1rem 0 1.5rem 0;
+}
+body main .main__container .song_image img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+  box-shadow: 1px 2px 3px white;
+}
+body main .main__container .song_image img.anime {
+  -webkit-animation: rotatey 3s linear infinite;
+          animation: rotatey 3s linear infinite;
+}
+body main .main__container .music_controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .main__container .music_controls i:not(:last-child) {
+  margin-right: 2rem;
+}
+body main .main__container .music_controls i.main_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 50%;
+}
+body main .main__container .music_controls i.main_btn:hover {
+  background-color: white;
+  color: black;
+}
+body main .main__container .music_controls .fa-forward:hover, body main .main__container .music_controls .fa-backward:hover {
+  box-shadow: 2px 2px 5px white;
+}
+
+@-webkit-keyframes rotatey {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotatey {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

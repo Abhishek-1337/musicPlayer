@@ -1,0 +1,43 @@
+.audio-player{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+  
+    span{
+        &:not(:last-child){
+            margin-right:0.32rem;
+        }
+        font-size: 0.78rem;
+    }
+    
+    #seek-slider{
+        
+        width:10.5rem;
+        height:2px;
+        margin-right:0.32rem;
+        margin-bottom: 0.85rem;
+        &::-webkit-slider-thumb{
+            box-sizing: content-box;
+            -webkit-appearance: none;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    input[type=range]::-moz-range-thumb{
+        border:none;
+        background-color: black;
+        height:14px;
+        width:14px;
+
+        &:active{
+            transform:scale(1.2);
+        }
+    }
+
+    // input[typer=range]:active::-moz-range-thumb{
+        
+    // }
+}

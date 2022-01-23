@@ -3,43 +3,81 @@ body {
   box-sizing: border-box;
   line-height: 0.5;
 }
-body main .main__container {
+
+.audio-player {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.audio-player span {
+  font-size: 0.78rem;
+}
+.audio-player span:not(:last-child) {
+  margin-right: 0.32rem;
+}
+.audio-player #seek-slider {
+  width: 10.5rem;
+  height: 2px;
+  margin-right: 0.32rem;
+  margin-bottom: 0.85rem;
+}
+.audio-player #seek-slider::-webkit-slider-thumb {
+  box-sizing: content-box;
+  -webkit-appearance: none;
+}
+.audio-player #seek-slider:focus {
+  outline: none;
+}
+.audio-player input[type=range]::-moz-range-thumb {
+  border: none;
+  background-color: black;
+  height: 14px;
+  width: 14px;
+}
+.audio-player input[type=range]::-moz-range-thumb:active {
+  transform: scale(1.2);
+}
+
+.main__container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 60vh;
-  width: 20vw;
-  background-color: rgba(70, 68, 65, 0.5);
+  height: 62vh;
+  width: 21vw;
+  background-color: rgba(87, 85, 81, 0.5);
   margin: auto;
   margin-top: 7rem;
   border-radius: 1.6rem;
-  box-shadow: 2px 2px 5px black;
-  color: #c2bcbc;
+  box-shadow: 2px 2px 5px #251f1f;
+  color: #ebe1e1;
 }
-body main .main__container-songdetail {
-  margin: 1rem 0 1.5rem 0;
+.main__container-songdetail {
+  margin: 1rem 0 0.5rem 0;
 }
-body main .main__container .song_image img {
-  width: 10rem;
-  height: 10rem;
+.main__container-songdetail h3, .main__container-songdetail h5 {
+  text-shadow: 0.7px 0.7px black;
+}
+.main__container .song_image img {
+  width: 10.5rem;
+  height: 10.5rem;
   border-radius: 50%;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
   box-shadow: 1px 2px 3px white;
 }
-body main .main__container .song_image img.anime {
-  -webkit-animation: rotatey 3s linear infinite;
-          animation: rotatey 3s linear infinite;
+.main__container .song_image img.anime {
+  -webkit-animation: rotatey 5s linear infinite;
+          animation: rotatey 5s linear infinite;
 }
-body main .main__container .music_controls {
+.main__container .music_controls {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main .main__container .music_controls i:not(:last-child) {
+.main__container .music_controls i:not(:last-child) {
   margin-right: 2rem;
 }
-body main .main__container .music_controls i.main_btn {
+.main__container .music_controls i.main_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,12 +86,46 @@ body main .main__container .music_controls i.main_btn {
   background-color: black;
   border-radius: 50%;
 }
-body main .main__container .music_controls i.main_btn:hover {
+.main__container .music_controls i.main_btn:hover {
   background-color: white;
   color: black;
 }
-body main .main__container .music_controls .fa-forward:hover, body main .main__container .music_controls .fa-backward:hover {
+.main__container .music_controls .fa-forward:hover, .main__container .music_controls .fa-backward:hover {
   box-shadow: 2px 2px 5px white;
+}
+.main__container .volumne_controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: -9rem;
+  right: 7rem;
+}
+.main__container .volumne_controls #sound {
+  transform: rotate(270deg);
+  width: 3.5rem;
+  height: 2px;
+  margin-bottom: 2rem;
+}
+.main__container .volumne_controls #sound::-webkit-slider-thumb {
+  box-sizing: content-box;
+  -webkit-appearance: none;
+}
+.main__container .volumne_controls #sound:focus {
+  outline: none;
+}
+.main__container .volumne_controls input[type=range]::-moz-range-thumb {
+  border: none;
+  background-color: black;
+  height: 14px;
+  width: 14px;
+}
+.main__container .volumne_controls input[type=range]::-moz-range-thumb:active {
+  transform: scale(1.2);
+}
+.main__container .volumne_controls i {
+  color: #1f1e1e;
 }
 
 @-webkit-keyframes rotatey {
@@ -71,5 +143,56 @@ body main .main__container .music_controls .fa-forward:hover, body main .main__c
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 1300px) {
+  .main__container {
+    width: 30%;
+  }
+}
+@media (max-width: 960px) {
+  .main__container {
+    margin-top: 2rem;
+    width: 20rem;
+  }
+}
+@media (max-height: 710px) {
+  .main__container {
+    height: 27rem;
+  }
+}
+@media (max-height: 500px) {
+  .main__container {
+    flex-direction: row;
+    height: 7rem;
+    width: 33rem;
+    margin-top: 6rem;
+  }
+  .main__container .song_image img {
+    width: 7.5rem;
+    height: 7.5rem;
+    position: relative;
+    bottom: 3.7rem;
+  }
+  .main__container .audio-player {
+    height: 2rem;
+    position: relative;
+    top: 2rem;
+    right: -1.5rem;
+  }
+  .main__container .music_controls {
+    height: 2rem;
+    position: relative;
+    top: 3.5rem;
+    right: 10rem;
+  }
+  .main__container .volumne_controls {
+    top: 0.8rem;
+  }
+  .main__container .volumne_controls input[type=range] {
+    transform: rotate(270deg);
+  }
+  .main__container .volumne_controls #sound {
+    width: 3.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
